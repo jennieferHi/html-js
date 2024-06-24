@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  padding:0;
+  background:teal;
+  color:white;
+  vertical-align: middle;
+  display: flex;
+  margin-bottom: 20px;
+  width: 210px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  transition: 0.3s;
+  
+  &:before, &:after {
+    content: ''; 
+    position: absolute; 
+    transition:.3s; 
+  }
+}
+.btn1{
+  justify-content: center;
+  &:before{
+    content:attr(data-content);
+    width: 100%;
+    top: 50%; 
+    color: transparent;  
+  }
+  &:hover{
+    color: transparent;
+    &:before{
+      top: 0; 
+      color: rgb(182, 255, 210) 
+    }
+  }
+}
+
+ .effect-2{
+  &:after{
+    content: attr(data-content); 
+    left: 0;
+    top: 0;
+    width: 0%; 
+    height: 100%;  
+    background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+	  -webkit-background-clip: text;  
+	  -webkit-text-fill-color: transparent; 
+	  }
+
+	  &:hover:after{
+      width: 100%; 
+    }
+}
+    </style>
+</head>
+<body>
+    <h1><a href="#" class="effect-1" 
+        data-content="Hover Effect 1"> 
+        </a></h1>
+    <h1><button class="btn1" data-content="Click Me!">
+        Learn More</button></h1>
+      
+</body>
+</html>

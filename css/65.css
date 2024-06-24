@@ -1,0 +1,28 @@
+
+.logo{
+    background-color: blue;
+}
+text {
+    padding: 20px;
+    stroke-width:5px;
+    stroke-dasharray: 100;
+    stroke-dashoffset: -900;
+    animation: text 4s forwards 1;
+    animation-delay: 1s;
+   }
+   
+  
+   @keyframes text {
+    75% {
+     fill: transparent;
+     stroke-dashoffset: 0;
+     stroke-width: 5px;
+    }
+    100% {
+     fill:#F3F3F3;  
+     stroke-dashoffset: 0;
+     stroke-width: 0;
+    }
+   }
+ 
+   
